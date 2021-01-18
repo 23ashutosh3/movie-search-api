@@ -1,4 +1,5 @@
 import React from 'react'
+import moment from 'moment'
 
 function Result({ result}) {
 	return (
@@ -8,6 +9,9 @@ function Result({ result}) {
 			</div>
 			<div className="Second">
 			<h3>{result.title}</h3>
+			<p>release date :{moment(result.release_date).format("Do MMM YYYY")}{" "}</p>
+			<p>rating : {result.vote_average}</p>
+
 			<p>{result.overview}</p>
 			</div>
 			
